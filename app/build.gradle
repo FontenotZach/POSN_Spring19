@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "com.posn"
         minSdkVersion 21
@@ -17,7 +17,7 @@ android {
         }
     }
     dexOptions {
-        incremental true
+        //incremental true
         javaMaxHeapSize "4g"
     }
     productFlavors {
@@ -28,13 +28,13 @@ android {
 
 
 dependencies {
-    compile files('libs/activation.jar')
-    compile files('libs/additionnal.jar')
-    compile files('libs/dropbox-android-sdk-1.6.2.jar')
-    compile files('libs/mail.jar')
-    compile 'com.android.support:design:23.0.1'
-    compile 'com.google.guava:guava:18.0'
-    compile 'com.google.android.gms:play-services:8+'
-    compile project(':live-sdk')
-    compile files('libs/json-simple-1.1.1.jar')
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/dropbox-android-sdk-1.6.2.jar')
+    implementation files('libs/mail.jar')
+    implementation 'com.android.support:design:23.0.1'
+    implementation 'com.google.guava:guava:18.0'
+    implementation 'com.google.android.gms:play-services:8+'
+    implementation project(':live-sdk')
+    implementation files('libs/json-simple-1.1.1.jar')
 }
